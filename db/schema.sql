@@ -12,4 +12,21 @@ CREATE TABLE role (
     department_id; INT NOT NULL,
     pay DECIMAL NOT NULL,
     PRIMARY KEY (id)
+);
+
+CREATE TABLE worker (
+    id INT NOT NULL AUTO_INCREMENT
+    worker_name VARCHAR(30) NOT NULL
+    worker_last VARCHAR(30)NOT NULL
+    role_id INT NOT NULL,
+    PRIMARY KEY(id)
+);
+
+
+
+CREATE TABLE department (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+   name VARCHAR(30) AUTO_INCREMENT
+    PRIMARY KEY (id)
 )
+
