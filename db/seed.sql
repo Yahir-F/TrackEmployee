@@ -9,7 +9,7 @@ VALUES
       INSERT INTO  role (title, pay, department)
       VALUES ('Software Engineer', 170000, 2),
              ('Web Developer', 130000, 1),
-             ('Management', 250000),
+             ('Management', 250000, 3),
              ('Code Monkey', 1000000000, 4),
              ('Intern', 1,  3);
 
