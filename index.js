@@ -54,7 +54,7 @@ addEmp = () => {
 
 
 // addDepart
-let addDepart = () => {
+ addDepart = () => {
     inquirer.prompt([
         {
             type: 'input',
@@ -63,7 +63,27 @@ let addDepart = () => {
         },
     ])
 }
-{
-addEmp();
+
+newRole = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'roleName',
+            message: 'Please enter the role you want to add.'
+        },
+        {
+            type: 'input',
+            name: 'salary',
+            message: 'Please enter the salary for the entered role.'
+        }
+    ])
+.then ((response) => {
+    console.log(response.Reply)
+    db.query('select * from role', (err, res) => {
+console.table(response)
+    })
+    start();
+})
 }
+addEmp();
 // addDepart();
