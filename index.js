@@ -13,3 +13,25 @@ const db = mysql.createConnection({
 }, 
 console.log('succesfully connected to employeeData_db')
 );
+
+
+addEmp = () => {
+    inquirer.prompt([
+        {
+           type: 'input',
+           name: 'empFirst',
+           message: 'Please Enter the Employees First name',
+
+        },
+        {
+        type: 'input',
+        name: 'empLast',
+        message: 'Please Enter the Employees Last name',
+        },
+        {
+            type: 'input',
+            name: 'empRole',
+            message: 'Please Enter the Employees Role',
+        },
+    ])
+}
