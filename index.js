@@ -1,7 +1,9 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const conTable = require('console.table')
-const path = require('path')
+const path = require('path');
+const { response } = require('express');
+const { start } = require('repl');
 
 const PORT = process.env.PORT || 3001;
 
@@ -39,7 +41,18 @@ addEmp = () => {
             message: 'Please Enter the Employees Role',
         },
     ])
+.then((response) => {
+    console.log(response.Reply)
+    db.query('select * from worker', (err, res) => {
+        db.query(`insert into worker (worker_name, worker_last, role_id) values ('${response.empFirst}', '${response.empLast}', '${response.empRole}')`, (err, res) => {
+     console.table(response)
+    })
+         });
+        start();
+    });
 }
+
+
 // addDepart
 let addDepart = () => {
     inquirer.prompt([
