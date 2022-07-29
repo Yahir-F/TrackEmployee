@@ -4,8 +4,14 @@
 
 
 ## Description
-An application that saves and catergorizes employee data such as salary, position, employeeID, and several other things 
-
+An application that saves and catergorizes employee data such as salary, position, employeeID, and several other things.
+<br>
+<br>
+<br>
+![preview](./preview.png)
+<br/>
+<br>
+![preview2](preview2.gif)
 # Table of Contents
 * [Description](#description)
 * [Technologies](#technologies)
@@ -42,7 +48,13 @@ Contact me through my github Yahir-F
 Email: placeholder@gmail.com
 
 
-
+## NOTES
+Application is not fully functional yet
+Known bugs:
+<li>some info not displaying</li>
+<li> issues with the db</li>
+<li>Missing other Questions</li>
+<strong>Will Fix ASAP</strong>
 
 
 

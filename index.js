@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const conTable = require('console.table')
-
+const path = require('path')
 
 const PORT = process.env.PORT || 3001;
 
@@ -13,6 +13,11 @@ const db = mysql.createConnection({
 }, 
 console.log('succesfully connected to employeeData_db')
 );
+
+
+const options = ["View All Employees", "Add Employee", "Add Department", "Add Role"]
+
+
 
 
 addEmp = () => {
@@ -35,13 +40,17 @@ addEmp = () => {
         },
     ])
 }
-
-addDepart = () => {
+// addDepart
+let addDepart = () => {
     inquirer.prompt([
         {
             type: 'input',
             name: 'depname',
             message: 'Please enter the name of the department you wish to add.'
-        }
+        },
     ])
 }
+{
+addEmp();
+}
+// addDepart();
