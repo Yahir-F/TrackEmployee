@@ -1,10 +1,10 @@
 INSERT INTO worker(worker_name,worker_last,role_id)
 VALUES 
-       ("bob", "Cena", null, 1),
-        ("jeffrey", "hashbrown", 2, 4),
-       ("Under","Taker", 1, 4),
-       ("Big", "tech", 2, 8),
-       ("Yahir", "newDeveloper", 5, 3),
+       ("bob", "Cena"),
+        ("jeffrey", "hashbrown"),
+       ("Under", "Taker"),
+       ("Big", "tech")
+       ("Yahir", "newDeveloper");
       
       INSERT INTO  role (title, pay, department)
       VALUES ('Software Engineer', 170000, 2),
@@ -17,4 +17,4 @@ INSERT INTO (name)
 VALUES ('Developer'),
         ('Engineer'),
         ('HR'),
-        ('Internship'),
+        ('Internship');
