@@ -35,3 +35,13 @@ addEmp = () => {
         },
     ])
 }
+
+addDepart = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'depname',
+            message: 'Please enter the name of the department you wish to add.'
+        }
+    ])
+}
