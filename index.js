@@ -1,11 +1,12 @@
-const mysql = require('mysql')
-const inquirer = require('inquirer')
-const conTable = require('console.table')
+const mysql = require('mysql12')
 
+
+const PORT = process.env.PORT || 3001;
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const connection = mysql.createConnection({
-    host:"local",
-    port: 3306,
+    host:"localhost",
     user: "root",
     password:"password",
     database: "employeeData_db"
@@ -17,32 +18,3 @@ connection.connect(function(err) {
     return
 }
 });
-
-getrole();
-
-function getrole(){
-inquirer.prompt(
-{
-
-    name: 'role',
-    type: 'list',
-    message: 'Which of the following options would you like to do?',
-    choices: ['add', 'display', 'change', 'quit'],
-}
-).then(function({role}) {
-    switch (role) {
-        case 'add':
-            add();
-            break;
-    case 'display':
-        display();
-        break;
-    case 'change':
-    change();
-    break;
- case 'quit':
- connection.end()
- return;
-    }
-    })
-}
